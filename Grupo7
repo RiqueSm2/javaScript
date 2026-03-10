@@ -48,8 +48,16 @@ function calcularDesconto(distancia){
     return valorFinal;
 }
 
-function classificar(valorFinal){
-
+function classificar(duracao){
+    if(duracao <= 40){
+        return "Perto";      
+    }
+    else if(duracao <= 90){
+        return "Médio";      
+    }
+    else{
+        return "Longe";       
+    }
 }
 
 function gerarResumo(){

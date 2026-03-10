@@ -14,24 +14,20 @@ index.html
 	<div id="saida"></div>
 
 	<script>
-function iniciarSistema(){
 
-}
+//Console.log usado pra imprimir dado 
+console.log("Oi");
 
-function coletarDados(){
+//Solicitar dado ao usuário
+var distancia=console.log(prompt('Insira a distância'));
+var preco = 3 
+var desconto = 0
 
-}
-
-function calcularDesconto(valor){
-
-}
-
-function classificar(valorFinal){
-
-}
-
-function gerarResumo(){
-
+if(distancia<50){
+    console.log("Sem desconto");
+}else if(distancia<50&&<=100){
+    var desconto = 10
+    //calcular aqui o desconto e exibir na tela
 }
 
 

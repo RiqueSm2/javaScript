@@ -1,3 +1,4 @@
+index.html
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,36 +12,54 @@
 
 	<div id="saida"></div>
 
-<script>
-
+	<script>
 function iniciarSistema(){
 
-//Solicitar dado ao usuário
-var distancia = Number(prompt("Insira a distância da viagem em km"));
-
-var precoKm = 3;
-var preco = distancia * precoKm;
-var desconto = 0;
-
-if(distancia <= 50){
-	console.log("Sem desconto");
 }
 
-else if(distancia >= 51 && distancia <= 100){
-	desconto = preco * 0.10;
+function coletarDados(){
+    let nome = prompt("Digite seu nome:");
+    let duracao = Number(prompt("Digite a duração da viagem em minutos:"));
+    let distancia = Number(prompt("Digite a distância da viagem em km:"));
+
+    return {
+        nome: nome,
+        duracao: duracao,
+        distancia: distancia
+    };
 }
 
-else if(distancia >= 150){
-	desconto = preco * 0.15;
+function calcularDesconto(distancia){
+    const precoPorKm = 3;
+    let preco = distancia * precoPorKm;
+    let desconto = 0;
+
+    if(distancia <= 50){
+        desconto = 0; // sem desconto
+    } 
+    else if(distancia >= 51 && distancia <= 100){
+        desconto = preco * 0.10; // 10% de desconto
+    } 
+    else if(distancia >= 150){
+        desconto = preco * 0.15; // 15% de desconto
+    }
+
+    let valorFinal = preco - desconto;
+    return valorFinal;
 }
 
-var valorFinal = preco - desconto;
-
-console.log("Preço final: R$ " + valorFinal);
+function classificar(valorFinal){
 
 }
+
+function gerarResumo(){
+
+}
+
 
 </script>
+
+
 
 </body>
 </html>

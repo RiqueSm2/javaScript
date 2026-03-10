@@ -1,5 +1,3 @@
-
-index.html
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,31 +11,39 @@ index.html
 
 	<div id="saida"></div>
 
-	<script>
+<script>
 
-//Console.log usado pra imprimir dado 
-console.log("Oi");
+function iniciarSistema(){
 
 //Solicitar dado ao usuário
-var distancia=console.log(prompt('Insira a distância'));
-var preco = 3 
-var desconto = 0
+var distancia = Number(prompt("Insira a distância da viagem em km"));
 
-if(distancia<50){
-    console.log("Sem desconto");
-}else if(distancia<50&&<=100){
-    var desconto = 10
-    //calcular aqui o desconto e exibir na tela
+var precoKm = 3;
+var preco = distancia * precoKm;
+var desconto = 0;
+
+if(distancia <= 50){
+	console.log("Sem desconto");
 }
 
+else if(distancia >= 51 && distancia <= 100){
+	desconto = preco * 0.10;
+}
+
+else if(distancia >= 150){
+	desconto = preco * 0.15;
+}
+
+var valorFinal = preco - desconto;
+
+console.log("Preço final: R$ " + valorFinal);
+
+}
 
 </script>
 
-
-
 </body>
 </html>
-
 
 
 

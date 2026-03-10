@@ -16,6 +16,7 @@ index.html
 function iniciarSistema(){
 
 }
+// Mudei a fase 1 a pedido dos colegas para fazer mais sentido com o codigo
 
 function coletarDados(){
     let nome = prompt("Digite seu nome:");

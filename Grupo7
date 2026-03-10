@@ -1,2 +1,52 @@
-efsefddfsef
-gtrdgrdg
+
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Missão JavaScript</title>
+</head>
+
+<body>
+	<h1>Sistema de Teste da Startup</h1>
+	<button onclick="iniciarSistema()">Iniciar</button>
+
+	<div id="saida">
+
+
+</div>
+
+	<script>
+function iniciarSistema(){
+
+}
+
+function coletarDados(){
+
+}
+
+function calcularDesconto(valor){
+
+}
+
+function classificar(valorFinal){
+
+}
+
+function gerarResumo(){
+
+}
+
+
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+

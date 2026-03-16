@@ -15,14 +15,20 @@
   <h2>2) Calcular media de tres notas</h2>
  <label>Digite a 1 nota: </label>
  <input type="number" id="n1">
- <labal>Digite a 2 nota: </label>
+ <label>Digite a 2 nota: </label>
+ <input type="number" id="n2">
+ <label>Digite a 3 nota: </label> 
+ <input type="number" id="n3">
 
-   
+ <button onclick ="media()">Calcular</button>
+ <p id = "resultado2"></p>
+ 
+    
 
  <script>
  // Ex 1 
    function verificar(){
-   let numero = document.getElementById("num").value;
+   let numero = Number(document.getElementById("num").value);
    if (numero % 2 === 0){
    document.getElementById("resultado").innerText = "O numero " + numero + " é par";
     } else{
@@ -31,7 +37,13 @@
    }
 
   // Ex 2
-  
+  function media(){
+  let n1 = Number(document.getElementById("n1").value);
+  let n2 = Number(document.getElementById("n2").value);
+  let n3 = Number(document.getElementById("n3").value);
+  let media = (n1 + n2 + n3) / 3;
+  document.getElementById("resultado2").innerText = "A média é: " + media;
+    }
   
  </script>
 

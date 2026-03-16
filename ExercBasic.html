@@ -14,11 +14,11 @@
 
   <h2>2) Calcular media de tres notas</h2>
  <label>Digite a 1 nota: </label>
- <input type="number" id="n1">
+ <input type="number" id="n1"><br>
  <label>Digite a 2 nota: </label>
- <input type="number" id="n2">
+ <input type="number" id="n2"><br>
  <label>Digite a 3 nota: </label> 
- <input type="number" id="n3">
+ <input type="number" id="n3"><br>
 
  <button onclick ="media()">Calcular</button>
  <p id = "resultado2"></p>
@@ -42,7 +42,7 @@
   let n2 = Number(document.getElementById("n2").value);
   let n3 = Number(document.getElementById("n3").value);
   let media = (n1 + n2 + n3) / 3;
-  document.getElementById("resultado2").innerText = "A média é: " + media;
+  document.getElementById("resultado2").innerText = "A média é: " + media.toFixed(2);
     }
   
  </script>

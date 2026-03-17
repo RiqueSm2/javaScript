@@ -40,9 +40,10 @@ function coletarDados(){
     let distancia = Number(document.getElementById("distancia").value)
   }
 
-function calcularDesconto(distancia){
+function calcularDesconto(){
 
     const precoPorKm = 3;
+    let distancia = Number(get.elementById("distanciaViagem").value);
     let preco = distancia * precoPorKm;
     let desconto = 0;
 

@@ -10,10 +10,22 @@ index.html
 	<h1>Sistema de Teste da Startup</h1>
 	<button onclick="iniciarSistema()">Iniciar</button>
 
+    <h2> Coleta de dados </h2>
+    <input id= "nome" placeholder = "Insira seu nome">
+    <input
+
+
+    <h2> Validação dos Dados </h2>
+   
+
+
 	<div id="saida"></div>
+
+
 
 	<script>
 function iniciarSistema(){
+
 
 }
 // Mudei a fase 1 a pedido dos colegas para fazer mais sentido com o codigo
@@ -82,5 +94,8 @@ console.log("Boa viagem!!!! Volte Sempre!)
 
 }
 
+function validarDados()
+
+</script>
 
 

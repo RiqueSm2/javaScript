@@ -15,6 +15,8 @@ index.html
     <input id = "duracaoViagem" placeholder = "duracao" step = "1">
     <input id = "distanciaViagem" placeholder ="distancia" step = "0.01"> 
 
+    <h2> Calculo Desconto </h2>
+   
 
     <h2> Validação dos Dados </h2>
    
@@ -29,21 +31,17 @@ function iniciarSistema(){
 
 
 }
+
 // Mudei a fase 1 a pedido dos colegas para fazer mais sentido com o codigo
 
 function coletarDados(){
     let nome = document.getElementById("nome").value;
-    let duracao = Number(document.getElementById("duracaoViagem").value)
-    let distancia = Number()
-
-    return {
-        nome: nome,
-        duracao: duracao,
-        distancia: distancia
-    };
-}
+    let duracao = Number(document.getElementById("duracaoViagem").value);
+    let distancia = Number(document.getElementById("distancia").value)
+  }
 
 function calcularDesconto(distancia){
+
     const precoPorKm = 3;
     let preco = distancia * precoPorKm;
     let desconto = 0;

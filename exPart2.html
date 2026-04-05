@@ -32,6 +32,20 @@
  <button onclick="contarVogais()">Contar</button>
  <p id="resVogais"></p>
 </div> 
+
+
+ <div class "exercicio">
+ <h2>ListaDeCompras</h2>
+ <p id = "resultadoLista"></p>
+
+  
+ <div class "exercicio">
+ <h2>Informações do aluno</h2>
+ <p id= "infALuno" ></p>
+  
+  
+  
+ </div>
  
 <script>
 
@@ -68,9 +82,25 @@ for (let letra of palavra){
   document.getElementById("resVogais").innerText = "A palavra tem " + contador + " vogais.";
  
 }
+function listaDeCompras(){
+let lista = ["arroz", "feijao,", "macarrao","biscoito","laranja"];
+let resultado = "Lista de Compras:<br>";
+ for (let item for lista){
+  resultado += "-" + item + "<br>";
+   }
+ document.getElementById("resultadoLista").innerHTML = resultado;
+}
+function aluno(){
+let aluno = {nome: "Henrique", idade: "26", curso: "ADS"};
+let resultado = "Nome: " + aluno.nome + "<br>" +
+                "Idade: " + aluno.idade + "<br>" +
+                "Curso: " + aluno.curso;
  
+document.getElementById("infALuno").innerHTML = resultado;
+  
  
-
+ }
+  
 </script>
 </body>
 </html> 

@@ -22,19 +22,39 @@
  <button onclick ="media()">Calcular</button>
  <p id = "resultado2"></p>
 
- <h3>Converter Celsiu em Fahrenheit</h3>
+ <h2>Converter Celsiu em Fahrenheit</h2>
  <label>Informe o celcius: </label>
  <input type = "number" step="0.1" id= "temp"><br>
  <button onclick="celcius()">Converter</button><br>
  <p id = "resultado3"></p>
  
- <h4>Tabuada de um numero</h4>   
+ <h2>Tabuada de um numero</h2>   
  <label>Informe um numero: </label>
  <input type = "number" id = "tab"><br>
  <button onclick ="tabuada()">Calcular</button><br>
  <p id = "resultado4"></p>
 
+ <h2>Verificar se uma pessoa pode votar</h2>
+ <label>Informe a idade: </label>
+ <input type = "number" id = "idade">
+ <button onclick ="verificarIdade()">Verificar</button>
+ <p id = "resultado5"></p>
+
+ <h2>Calcular a area de um retangulo</h2>
+ <label>Informe o base: </label>
+ <input type = "number" id = "base">
+ <label>Altura: </label>
+ <input type = "number" id = altura> 
+ <button onclick= "areaRetangulo()">calcular</button>
+ <p id= "resultado6"></p>
+
+ <h2>Contagem regressiva</h2>
+ <label>Informe o numero: </label>
+ <input type = "number" id = "contagemRegressiva">
+ <button onclick = "contagemRegressiva()">calcular</button>
+ <p id = "resultado7"></p>
  <script>
+  
  // Ex 1 
    function verificar(){
    let numero = Number(document.getElementById("num").value);
@@ -69,7 +89,30 @@
   } 
   document.getElementById("resultado4").innerHTML = resultado;  
   }
- </script>
+
+  function verificarIdade(){
+  let valor = Number(document.getElementById("idade").value);
+  if((valor !== "" && !isNaN(valor) && Number(valor) >= 16){
+   document.getElementById("resultado5").innerHTML = "Você pode votar";
+  } else{document.getElementById("resultado5").innerHTML = "Você não pode votar";}
+  }
+
+  function areaRetangulo(){
+  let base = Number(document.getElementById("base").value);
+  let altura = Number(document.getElementById("altura"));
+  let resultado = base * altura;
+  document.getElementById("resultado6").innerHTML = resultado.toFixed(2);
+  }
+  
+  function contagemRegressiva(){
+  let num = parseInt(document.getElementById("contagemRegressiva").value);
+  let result = "";
+  for (let i = num; i >= 0; i--){
+   result += i + " ";
+  } 
+   document.getElementById("resultado7").innerText = result;
+  }
+   </script>
 
 
   

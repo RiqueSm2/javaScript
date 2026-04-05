@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+ <title>Prática de JavaScript</title>
+</head>
+<body>
+<div class="exercicio"> function calculadora(){
+<h2>Calculadora Simples</h2>  
+<label>Primeiro numero</label> 
+<input type = "number" id = "num1">
+<label>Operador</label>
+<input type = "text" id = "operador"> 
+<label>Segundo numero</label>
+<input type = "number" id = "num2">
+<button onclick = "calculadora()">calcular</button>
+<p id = "resultado1"></p>
+</div>
+
+<div class="exercicio">
+<h2>Jogo de Adivinhação</h2>  
+<label>Digite um numero de 1 a 10</label>
+<input type = "number" id ="palpite">
+<button onclick "jogoAdivinhacao()"></button>
+<p id = "resAdivinha"></p>
+ </div>
+
+<div class="exercicio"> 
+ <h2>13) Contar Vogais em uma Palavra</h2> 
+ <label>Digite uma palavra:</label> 
+ <input type="text" id="palavraVogais">
+ <button onclick="contarVogais()">Contar</button>
+ <p id="resVogais"></p>
+</div> 
+ 
+<script>
+
+ function calculadora(){
+let num1 = parseInt(document.getElementById("num1").value);
+let operador = document.getElementById("operador").value;   
+let num2 = parseInt(document.getElementById("num2").value);
+if(operador === "+"){
+  document.getElementById("resultado1").innerHTML = num1 + num2;
+} else if(operador === "-"){
+  document.getElementById("resultado1").innerHTML = num1 - num2;
+} else if(operador === "*"){
+  document.getElementById("resultado1").innerHTML = num1 * num2;
+   
+}
+  else if(operador === "/"){
+  document.getElementById("resultado1").innerHTML = num1 / num2;
+  }
+}
+function jogoAdivinhacao(){
+ let palpite = parseInt(document.getElementById("palpite").value);
+ let numeroSecreto = Math.floor(Math.random() * 10)+1;
+ let msg = (palpite === numeroSecreto) ? "Parabens, acertou" : "Eroou";
+ document.getElementById("resAdivinha").innerText = msg; 
+}
+function contarVogais(){
+let palavra = document.getElementById("palavraVogais").value.toLowerCase();
+let vogais = "aeiou";
+let contador = 0;
+for (let letra of palavra){
+ if(vogais.include(letra)) {
+  contador++;}
+}
+  document.getElementById("resVogais").innerText = "A palavra tem " + contador + " vogais.";
+ 
+}
+ 
+ 
+
+</script>
+</body>
+</html> 
+
